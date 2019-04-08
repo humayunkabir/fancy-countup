@@ -37,5 +37,13 @@
     npm start
     ```
 6. Change the reference of `create-fancy-plugin` with your plugin name and the `url`s in `package.json` file.
+7. To build `dist` run:
+    ```
+    gulp dist
+    ```
+    or
+    ```
+    npm run build
+    ```
 
 Changing a remote's URL: [https://help.github.com/en/articles/changing-a-remotes-url](https://help.github.com/en/articles/changing-a-remotes-url)

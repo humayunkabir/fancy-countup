@@ -1,1 +1,0 @@
-{"version":3,"sources":["plugin.scss"],"names":[],"mappings":"AAEA,KACE,iBAAA","file":"plugin.min.css","sourcesContent":["$bg-body: #fafafa;\n\nbody {\n  background-color: $bg-body;\n}"]}

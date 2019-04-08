@@ -62,7 +62,13 @@ const PATHS = {
       DEST: 'dist/pug/',
     },
   },
-  GENERATED: [ 'dist/**/**.*', 'docs/**/**.*' ],
+  ASSETS: {
+    SRC: 'assets/**/*.*',
+    DEST: {
+      DOCS: 'docs/assets/'
+    }
+  },
+  GENERATED: [ 'dist', 'docs' ],
 };
 
 /*-----------------------------------------------
@@ -163,6 +169,12 @@ gulp.task('pug2html', () => gulp.src(PATHS.PUG.COMPILE.SRC)
 
 
 /*-----------------------------------------------
+|   Assets
+-----------------------------------------------*/
+gulp.task('assets', () => gulp.src(PATHS.ASSETS.SRC).pipe(gulp.dest(PATHS.ASSETS.DEST.DOCS)));
+
+
+/*-----------------------------------------------
 |   Compile PUG
 -----------------------------------------------*/
 /**
@@ -212,10 +224,10 @@ gulp.task('watch', () => {
     done();
   }));
 
-  // gulp.watch([Paths.ASSETS.FONTS, Paths.ASSETS.VIDEO, Paths.ASSETS.IMG], (done) => {
-  //   reload();
-  //   done();
-  // });
+  gulp.watch([PATHS.ASSETS.SRC], (done) => {
+    reload();
+    done();
+  });
 });
 
 
@@ -237,7 +249,7 @@ gulp.task('serve', () => {
 /*-----------------------------------------------
 |   Default Task
 -----------------------------------------------*/
-gulp.task('default', gulp.series('js', 'css:min', gulp.parallel('watch', 'serve')));
+gulp.task('default', gulp.series('js', 'css:min', 'assets', gulp.parallel('watch', 'serve')));
 
 
 /*-----------------------------------------------
