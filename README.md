@@ -36,5 +36,6 @@
     ```
     npm start
     ```
+6. Change the reference of `create-fancy-plugin` with your plugin name and the `url`s in `package.json` file.
 
 Changing a remote's URL: [https://help.github.com/en/articles/changing-a-remotes-url](https://help.github.com/en/articles/changing-a-remotes-url)

@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/humayunkabir/fancy-bulkselect.git"
+    "url": "git+https://github.com/humayunkabir/create-fancy-plugin.git"
   },
-  "keywords": [],
+  "keywords": ["fancy", "fancy-plugin", "create-plugin", "create-fancy-plugin", "plugin"],
   "author": "Humayun kabir",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/humayunkabir/fancy-bulkselect/issues"
+    "url": "https://github.com/humayunkabir/create-fancy-plugin/issues"
   },
-  "homepage": "https://humayunkabir.github.io/fancy-bulkselect/",
+  "homepage": "https://humayunkabir.github.io/create-fancy-plugin/",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
