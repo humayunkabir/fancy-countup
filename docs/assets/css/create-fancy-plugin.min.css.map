@@ -1,0 +1,1 @@
+{"version":3,"sources":["create-fancy-plugin.scss"],"names":[],"mappings":"AAEA,KACE,iBAAA","file":"create-fancy-plugin.min.css","sourcesContent":["$bg-body: #fafafa;\n\nbody {\n  background-color: $bg-body;\n}"]}
