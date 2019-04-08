@@ -68,7 +68,7 @@ const PATHS = {
 /*-----------------------------------------------
 |   Cleaning
 -----------------------------------------------*/
-gulp.task('clean', () => del(Paths.GENERATED, { force: true }));
+gulp.task('clean', () => del(PATHS.GENERATED, { force: true }));
 
 
 /*-----------------------------------------------
