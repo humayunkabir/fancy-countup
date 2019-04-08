@@ -14,11 +14,11 @@
     ```
 3. Change your remote's URL from **SSH** to **HTTPS** with the `git remote set-url` command.
     ```
-    git remote set-url git@github.com:USERNAME/PLUGIN.git
+    git remote set-url origin git@github.com:USERNAME/PLUGIN.git
     ```
     or
     ```
-    git remote set-url https://github.com/USERNAME/PLUGIN.git
+    git remote set-url origin https://github.com/USERNAME/PLUGIN.git
     ```
     Verify that the remote URL has changed.
     ```

@@ -1,6 +1,6 @@
 {
   "name": "create-fancy-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create Fancy Plugin",
   "main": "index.js",
   "scripts": {
