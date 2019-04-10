@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/humayunkabir/create-fancy-plugin.git"
   },
-  "keywords": ["fancy", "fancy-plugin", "create-plugin", "create-fancy-plugin", "plugin"],
+  "keywords": [
+    "fancy",
+    "fancy-plugin",
+    "create-plugin",
+    "create-fancy-plugin",
+    "plugin"
+  ],
   "author": "Humayun kabir",
   "license": "MIT",
   "bugs": {
@@ -22,6 +28,7 @@
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "ansi": "^0.3.1",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-plugin-transform-strict-mode": "^6.24.1",
@@ -45,5 +52,9 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "pretty": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "prismjs": "^1.16.0"
   }
 }

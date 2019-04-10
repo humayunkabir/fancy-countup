@@ -1,5 +1,5 @@
 include _mixins
-
+include _functions
 - var PLUGIN_NAME = 'create-fancy-plugin'
 
 <!DOCTYPE html>
@@ -8,21 +8,49 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title=PLUGIN_NAME
+    
+    title
+      +cleanText(PLUGIN_NAME)
 
     link(rel='apple-touch-icon', sizes='180x180', href='assets/img/favicons/apple-touch-icon.png')
     link(rel='icon', type='image/png', sizes='32x32', href='assets/img/favicons/favicon-32x32.png')
     link(rel='icon', type='image/png', sizes='16x16', href='assets/img/favicons/favicon-16x16.png')
     meta(name='msapplication-TileColor', content='#da532c')
     meta(name='theme-color', content='#ffffff')
-
+      
+    link(rel='stylesheet', href='assets/lib/prism/prism-okaidia.css')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
-    link(rel='stylesheet', href=`assets/css/${PLUGIN_NAME}.min.css`)
-    
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=' crossorigin='anonymous')
+    // Place third-party plugin's stylesheets here
+    link(rel='stylesheet', href=`assets/lib/${PLUGIN_NAME}/css/plugin.min.css`)
+
+    script(src='assets/lib/jquery/jquery.min.js')
+    script(src='assets/lib/prism/prism.js')
     script(defer src='https://use.fontawesome.com/releases/v5.8.1/js/all.js' integrity='sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ' crossorigin='anonymous')
-    script(src=`assets/js/${PLUGIN_NAME}.min.js`)
-  
+    // Place third-party plugin's JavaScripts here
+    script(src=`assets/lib/${PLUGIN_NAME}/js/plugin.min.js`)
+
   body
+    mixin PageHeader(config)
+      if PLUGIN_NAME
+        h3
+          +cleanText(PLUGIN_NAME)
+      if config.description
+        p.mb-0!=config.description
+      block
+      if config.url
+        a(href=config.url target='_blank').btn.btn-link.pl-0=config.linkText
+          span.fas.fa-chevron-right.ml-1(data-fa-transform='shrink-4')
+
     .container.py-5
-      +demo
+      .row
+        .col
+          .card.shadow-sm.mb-3
+            .card-body
+              +PageHeader(pageHeader)
+
+          .card.shadow-sm.mb-3
+            .card-header.bg-light
+              +demo
+            .card-body
+              
+              +documentation

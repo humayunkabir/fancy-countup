@@ -5,22 +5,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>create-fancy-plugin</title>
+    <title>Create fancy plugin</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/create-fancy-plugin.min.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-    <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-    <script src="assets/js/create-fancy-plugin.min.js"></script>
+    <link rel="stylesheet" href="assets/lib/prism/prism-okaidia.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><!-- Place third-party plugin's stylesheets here-->
+    <link rel="stylesheet" href="assets/lib/create-fancy-plugin/css/plugin.min.css" />
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/prism/prism.js"></script>
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script><!-- Place third-party plugin's JavaScripts here-->
+    <script src="assets/lib/create-fancy-plugin/js/plugin.min.js"></script>
   </head>
 
   <body>
     <div class="container py-5">
-      <h1>Getting started!</h1>
+      <div class="row">
+        <div class="col">
+          <div class="card shadow-sm mb-3">
+            <div class="card-body">
+              <h3>Create fancy plugin</h3>
+              <p class="mb-0">Life isn't about finding yourself. Life is about creating yourself.</p><a class="btn btn-link pl-0" href="https://humayunkabir.github.io/create-fancy-plugin/" target="_blank">See full Documentation<span class="fas fa-chevron-right ml-1" data-fa-transform="shrink-4"></span></a>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-3">
+            <div class="card-header bg-light">
+              <h5 class="mb-0">Getting started!</h5>
+            </div>
+            <div class="card-body">
+              <ol class="pl-3">
+                <li>
+                  <p class="mb-0">Clone <code class="font-weight-bold font-italic">create-fancy-plugin</code> and rename it with your plugin name.</p><pre class="mt-2"><code class="language-html">git clone git@github.com:humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git clone https://github.com/humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre>
+                </li>
+                <li>
+                  <p class="mb-0">Enter into your plugin folder.</p><pre class="mt-2"><code class="language-html">cd PLUGIN_NAME</code></pre>
+                </li>
+                <li>
+                  <p class="mb-0">Change your remote's URL from <span class="font-weight-bold">SSH</span> or <span class="font-weight-bold">HTTPS</span> with the <code>git remote set-url</code> command.<pre class="mt-2"><code class="language-html">git remote set-url origin git@github.com:USERNAME/PLUGIN_NAME.git</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git remote set-url origin https://github.com/USERNAME/PLUGIN_NAME.git</code></pre>
+                    <p class="mb-0">Verify that the remote URL has changed.</p><pre class="mt-2"><code class="language-html">git remote -v</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p class="mb-0">Download dependencies </p><pre class="mt-2"><code class="language-html">npm i</code></pre>
+                <li>
+                  <p class="mb-0">To start</p>
+                </li><pre class="mt-2"><code class="language-html">gulp</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm start</code></pre>
+                </li>
+                <li>
+                  <p class="mb-0">Change the reference of <code>create-fancy-plugin</code> with your plugin name and the <code>url</code>s in <code>package.json</code> file.</p>
+                </li>
+                <li>
+                  <p class="mb-0">To build <code>dist</code> run:</p><pre class="mt-2"><code class="language-html">gulp dist</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm run build</code></pre>
+                </li>
+              </ol>
+              <p class="mb-0">Changing a remote's URL: <a href="https://help.github.com/en/articles/changing-a-remotes-url" target="_blank">https://help.github.com/en/articles/changing-a-remotes-url</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 

@@ -1,0 +1,4 @@
+body { background-color: $bg-body; }
+.bg-light {background-color: $light !important;}
+.border { border: 1px solid $border-color; }
+.card, .card-header, .card-footer { border-color: $border-color !important; }

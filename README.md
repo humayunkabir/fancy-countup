@@ -2,23 +2,23 @@
 
 1. Clone **`create-fancy-plugin`** and rename it with your plugin name.
     ```
-    git clone git@github.com:humayunkabir/create-fancy-plugin.git PLUGIN
+    git clone git@github.com:humayunkabir/create-fancy-plugin.git PLUGIN_NAME
     ```
     or
     ```
-    git clone https://github.com/humayunkabir/create-fancy-plugin.git PLUGIN
+    git clone https://github.com/humayunkabir/create-fancy-plugin.git PLUGIN_NAME
     ```
-2.  Enter into your plugin folder
+2.  Enter into your plugin folder.
     ```
-    cd PLUGIN
+    cd PLUGIN_NAME
     ```
-3. Change your remote's URL from **SSH** to **HTTPS** with the `git remote set-url` command.
+3. Change your remote's URL from **SSH** or **HTTPS** with the `git remote set-url` command.
     ```
-    git remote set-url origin git@github.com:USERNAME/PLUGIN.git
+    git remote set-url origin git@github.com:USERNAME/PLUGIN_NAME.git
     ```
     or
     ```
-    git remote set-url origin https://github.com/USERNAME/PLUGIN.git
+    git remote set-url origin https://github.com/USERNAME/PLUGIN_NAME.git
     ```
     Verify that the remote URL has changed.
     ```

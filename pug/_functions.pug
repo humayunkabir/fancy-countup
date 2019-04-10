@@ -1,0 +1,24 @@
+mixin escape
+  - var oldBuf = pug_html;
+  - pug_html = '';
+  block
+  - pug_html = oldBuf + pug.escape(jsPretty(pug_html, {ocd: true}));
+    
+mixin componentCard
+  .row
+    .col-12
+      block
+    .col-12
+      pre.rounded.mt-2.mb-0
+        code.language-html
+          +escape
+            block
+              
+mixin componentCardLib
+    pre.mt-2
+      code.language-html
+        +escape
+          block
+        
+mixin cleanText(str)
+  | #{(str.charAt(0).toUpperCase() + str.slice(1)).replace(/-/g, ' ')}

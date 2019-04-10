@@ -25,6 +25,9 @@ const gulpJsbeautifier = require('gulp-jsbeautifier');
 const browserSync = require('browser-sync');
 const { reload } = browserSync;
 
+const ansi = require('ansi');
+const cursor = ansi(process.stdout);
+
 const package = require('./package.json');
 const { name, version } = package;
 
@@ -37,7 +40,7 @@ const PATHS = {
     SRC: 'js/*.js',
     DEST: {
       DIST: 'dist/js/',
-      DOCS: 'docs/assets/js/',
+      DOCS: `docs/assets/lib/${name}/js/`,
     },
   },
   SCSS: {
@@ -49,7 +52,7 @@ const PATHS = {
   CSS: {
     DEST: {
       DIST: 'dist/css/',
-      DOCS: 'docs/assets/css/',
+      DOCS: `docs/assets/lib/${name}/css/`,
     },
   },
   PUG: {
@@ -58,7 +61,7 @@ const PATHS = {
       DEST: 'docs/',
     },
     RAW: {
-      SRC: 'pug/**/_*.pug',
+      SRC: 'pug/_mixins.pug',
       DEST: 'dist/pug/',
     },
   },
@@ -68,6 +71,11 @@ const PATHS = {
       DOCS: 'docs/assets/'
     }
   },
+  DEPENDENCIES: {
+    'jquery': ['node_modules/jquery/dist/jquery.min.js'],
+    'prism': ['node_modules/prismjs/prism.js', 'node_modules/prismjs/themes/prism-okaidia.css'],
+  },
+  LIB: 'docs/assets/lib/',
   GENERATED: [ 'dist', 'docs' ],
 };
 
@@ -84,7 +92,7 @@ gulp.task('js', () => gulp.src(PATHS.JS.SRC)
   .pipe(eslint({ fix: true }))
   .pipe(eslint.format())
   .pipe(eslint.failAfterError())
-  .pipe(concat(`${name}.js`))
+  .pipe(concat('plugin.js'))
   .pipe(replace(/^(export|import).*/gm, ''))
   .pipe(babel({
     compact: false,
@@ -175,6 +183,20 @@ gulp.task('assets', () => gulp.src(PATHS.ASSETS.SRC).pipe(gulp.dest(PATHS.ASSETS
 
 
 /*-----------------------------------------------
+|   Dependencies
+-----------------------------------------------*/
+gulp.task('dependency', (done) => {
+  Object.keys(PATHS.DEPENDENCIES).map(item => {
+    PATHS.DEPENDENCIES[item].map(i => {
+      gulp.src(i)
+        .pipe(gulp.dest(`${PATHS.LIB}${item}`));
+    })
+  });
+  done();
+});
+
+
+/*-----------------------------------------------
 |   Compile PUG
 -----------------------------------------------*/
 /**
@@ -214,7 +236,7 @@ const compilePug = (req, res, next) => {
 gulp.task('watch', () => {
   gulp.watch(PATHS.SCSS.SRC, gulp.series('css:min'));
 
-  gulp.watch(PATHS.PUG.COMPILE.SRC, gulp.series((done) => {
+  gulp.watch([PATHS.PUG.COMPILE.SRC, PATHS.PUG.RAW.SRC], gulp.series((done) => {
     reload();
     done();
   }));
@@ -249,7 +271,7 @@ gulp.task('serve', () => {
 /*-----------------------------------------------
 |   Default Task
 -----------------------------------------------*/
-gulp.task('default', gulp.series('js', 'css:min', 'assets', gulp.parallel('watch', 'serve')));
+gulp.task('default', gulp.series('js', 'css:min', 'assets', 'dependency', gulp.parallel('watch', 'serve')));
 
 
 /*-----------------------------------------------
