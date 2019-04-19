@@ -47,3 +47,9 @@
     ```
 
 Changing a remote's URL: [https://help.github.com/en/articles/changing-a-remotes-url](https://help.github.com/en/articles/changing-a-remotes-url)
+
+
+Please report bugs and contribute at github.
+- [Repository](https://github.com/humayunkabir/create-fancy-plugin)
+- [Issues](https://github.com/humayunkabir/create-fancy-plugin/issues)
+- [Projects](https://github.com/humayunkabir/create-fancy-plugin/projects)

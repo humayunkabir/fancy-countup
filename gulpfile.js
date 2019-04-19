@@ -72,7 +72,6 @@ const PATHS = {
     }
   },
   DEPENDENCIES: {
-    'jquery': ['node_modules/jquery/dist/jquery.min.js'],
     'prism': ['node_modules/prismjs/prism.js', 'node_modules/prismjs/themes/prism-okaidia.css'],
   },
   LIB: 'docs/assets/lib/',
@@ -92,7 +91,7 @@ gulp.task('js', () => gulp.src(PATHS.JS.SRC)
   .pipe(eslint({ fix: true }))
   .pipe(eslint.format())
   .pipe(eslint.failAfterError())
-  .pipe(concat('plugin.js'))
+  .pipe(concat(`${name}.js`))
   .pipe(replace(/^(export|import).*/gm, ''))
   .pipe(babel({
     compact: false,
