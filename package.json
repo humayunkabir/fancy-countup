@@ -1,7 +1,7 @@
 {
-  "name": "create-fancy-plugin",
-  "version": "0.1.4",
-  "description": "Create Fancy Plugin",
+  "name": "fancy-countup",
+  "version": "0.1.0",
+  "description": "Count up component will start counting after an element with data-countup attribute become visible in the viewport",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -9,21 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/humayunkabir/create-fancy-plugin.git"
+    "url": "git+https://github.com/humayunkabir/fancy-countup.git"
   },
   "keywords": [
     "fancy",
     "fancy-plugin",
-    "create-plugin",
-    "create-fancy-plugin",
+    "fancy-countup",
     "plugin"
   ],
   "author": "Humayun kabir",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/humayunkabir/create-fancy-plugin/issues"
+    "url": "https://github.com/humayunkabir/fancy-countup/issues"
   },
-  "homepage": "https://humayunkabir.github.io/create-fancy-plugin/",
+  "homepage": "https://humayunkabir.github.io/fancy-countup/",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",

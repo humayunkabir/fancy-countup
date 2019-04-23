@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Create fancy plugin</title>
+    <title>Fancy countup</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
@@ -13,12 +13,12 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/lib/prism/prism-okaidia.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><!-- Place third-party plugin's stylesheets here-->
-    <link rel="stylesheet" href="assets/lib/create-fancy-plugin/css/create-fancy-plugin.min.css" />
+    <link rel="stylesheet" href="assets/lib/fancy-countup/css/fancy-countup.min.css" />
     <!--script(src='assets/lib/jquery/jquery.min.js')-->
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="assets/lib/prism/prism.js"></script>
     <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script><!-- Place third-party plugin's JavaScripts here-->
-    <script src="assets/lib/create-fancy-plugin/js/create-fancy-plugin.min.js"></script>
+    <script src="assets/lib/fancy-countup/js/fancy-countup.min.js"></script>
   </head>
 
   <body>
@@ -27,41 +27,46 @@
         <div class="col">
           <div class="card shadow-sm mb-3">
             <div class="card-body">
-              <h3>Create fancy plugin</h3>
-              <p class="mb-0">Life isn't about finding yourself. Life is about creating yourself.</p><a class="btn btn-link pl-0" href="https://github.com/humayunkabir/create-fancy-plugin" target="_blank">See on GitHub<span class="fas fa-chevron-right ml-1" data-fa-transform="shrink-4"></span></a>
+              <h3>Fancy countup</h3>
+              <p class="mb-0">Count up component will start counting after an element with data-countup attribute become visible in the viewport</p><a class="btn btn-link pl-0" href="https://github.com/humayunkabir/fancy-countup" target="_blank">See on GitHub<span class="fas fa-chevron-right ml-1" data-fa-transform="shrink-4"></span></a>
             </div>
           </div>
           <div class="card shadow-sm mb-3">
             <div class="card-header bg-light">
-              <h5 class="mb-0">Getting started!</h5>
+              <h5 class="mb-0">Example</h5>
             </div>
             <div class="card-body">
-              <ol class="pl-3">
-                <li>
-                  <p class="mb-0">Clone <code class="font-weight-bold font-italic">create-fancy-plugin</code> and rename it with your plugin name.</p><pre class="mt-2"><code class="language-html">git clone git@github.com:humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git clone https://github.com/humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Enter into your plugin folder.</p><pre class="mt-2"><code class="language-html">cd PLUGIN_NAME</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Change your remote's URL from <span class="font-weight-bold">SSH</span> or <span class="font-weight-bold">HTTPS</span> with the <code>git remote set-url</code> command.<pre class="mt-2"><code class="language-html">git remote set-url origin git@github.com:USERNAME/PLUGIN_NAME.git</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git remote set-url origin https://github.com/USERNAME/PLUGIN_NAME.git</code></pre>
-                    <p class="mb-0">Verify that the remote URL has changed.</p><pre class="mt-2"><code class="language-html">git remote -v</code></pre>
-                  </p>
-                </li>
-                <li>
-                  <p class="mb-0">Download dependencies </p><pre class="mt-2"><code class="language-html">npm i</code></pre>
-                <li>
-                  <p class="mb-0">To start</p>
-                </li><pre class="mt-2"><code class="language-html">gulp</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm start</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Change the reference of <code>create-fancy-plugin</code> with your plugin name and the <code>url</code>s in <code>package.json</code> file.</p>
-                </li>
-                <li>
-                  <p class="mb-0">To build <code>dist</code> run:</p><pre class="mt-2"><code class="language-html">gulp dist</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm run build</code></pre>
-                </li>
-              </ol>
-              <p class="mb-0">Changing a remote's URL: <a href="https://help.github.com/en/articles/changing-a-remotes-url" target="_blank">https://help.github.com/en/articles/changing-a-remotes-url</a></p>
+              <div class="row">
+                <div class="col-6 col-md-4 col-xl mb-4 mb-xl-0 text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487}'>0</span>
+                  <h6 class="mb-0">(Default) </h6>
+                </div>
+                <div class="col-6 col-md-4 col-xl mb-4 mb-xl-0 text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":23542,"duration":10000}'>0</span>
+                  <h6 class="mb-0">(Duration 10s) </h6>
+                </div>
+                <div class="col-6 col-md-4 col-xl mb-4 mb-xl-0 text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"comma"}'>0</span>
+                  <h6 class="mb-0">(Comma) </h6>
+                </div>
+                <div class="col-6 col-md-4 col-xl mb-4 mb-md-0 text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"space"}'>0</span>
+                  <h6 class="mb-0">(Space) </h6>
+                </div>
+                <div class="col-6 col-md-4 col-xl text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"alphanumeric"}'>0</span>
+                  <h6 class="mb-0">(Alphanumeric) </h6>
+                </div>
+                <div class="col-6 col-md-4 col-xl text-center">
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"comma","prefix":"$"}'>0</span>
+                  <h6 class="mb-0">(Prefix)</h6>
+                </div>
+              </div><pre class="mt-2"><code class="language-html">&lt;span data-countup='{&quot;count&quot;:36487}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:23542,&quot;duration&quot;:10000}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;comma&quot;}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;space&quot;}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;alphanumeric&quot;}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;comma&quot;,&quot;prefix&quot;:&quot;$&quot;}'&gt;0&lt;/span&gt;</code></pre>
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const PATHS = {
     },
   },
   SCSS: {
-    SRC: 'scss/**/*.scss',
+    SRC: 'scss/**/(_)*.scss',
     DEST: {
       DIST: 'dist/scss/',
     },
@@ -61,7 +61,7 @@ const PATHS = {
       DEST: 'docs/',
     },
     RAW: {
-      SRC: 'pug/_mixins.pug',
+      SRC: `pug/_${name}.pug`,
       DEST: 'dist/pug/',
     },
   },

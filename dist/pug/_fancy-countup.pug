@@ -1,0 +1,48 @@
+block append variables
+  -
+    var pageHeader = {
+      title: 'Countup',
+      description: 'Count up component will start counting after an element with data-countup attribute become visible in the viewport',
+      url: 'https://github.com/humayunkabir/fancy-countup',
+      linkText: 'See on GitHub'
+    }
+
+mixin fancyCountupDoc
+  .row
+    .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 36487}) 0
+      h6.mb-0 (Default) 
+    .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 23542, "duration": 10000}) 0
+      h6.mb-0 (Duration 10s) 
+    .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "comma"}) 0
+      h6.mb-0 (Comma) 
+    .col-6.col-md-4.col-xl.mb-4.mb-md-0.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "space"}) 0
+      h6.mb-0 (Space) 
+    .col-6.col-md-4.col-xl.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "alphanumeric"}) 0
+      h6.mb-0 (Alphanumeric) 
+    .col-6.col-md-4.col-xl.text-center
+      = '\n'
+      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "comma", "prefix": "$"}) 0
+      h6.mb-0 (Prefix)
+
+mixin fancyCountupCode
+  span(data-countup!={"count": 36487}) 0
+  = '\n'
+  span(data-countup!={"count": 23542, "duration": 10000}) 0
+  = '\n'
+  span(data-countup!={"count": 36487, "format": "comma"}) 0
+  = '\n'
+  span(data-countup!={"count": 36487, "format": "space"}) 0
+  = '\n'
+  span(data-countup!={"count": 36487, "format": "alphanumeric"}) 0
+  = '\n'
+  span(data-countup!={"count": 36487, "format": "comma", "prefix": "$"}) 0

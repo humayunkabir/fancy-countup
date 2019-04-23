@@ -1,6 +1,6 @@
-include _mixins
+include _fancy-countup
 include _functions
-- var PLUGIN_NAME = 'create-fancy-plugin'
+- var PLUGIN_NAME = 'fancy-countup'
 
 <!DOCTYPE html>
 html(lang='en')
@@ -51,7 +51,8 @@ html(lang='en')
 
           .card.shadow-sm.mb-3
             .card-header.bg-light
-              h5.mb-0 Getting started!
+              h5.mb-0 Example
             .card-body
-              
-              +documentation
+              +fancyCountupDoc
+              +componentCardLib
+                +fancyCountupCode
