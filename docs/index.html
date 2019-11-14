@@ -33,6 +33,21 @@
           </div>
           <div class="card shadow-sm mb-3">
             <div class="card-header bg-light">
+              <h5 class="mb-0">Options</h5>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><code>count</code></li>
+                <li><code>format</code></li>
+                <li><code>prefix</code></li>
+                <li><code>suffix</code></li>
+                <li><code>duration</code></li>
+                <li><code>delay</code></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-3">
+            <div class="card-header bg-light">
               <h5 class="mb-0">Example</h5>
             </div>
             <div class="card-body">
@@ -42,12 +57,12 @@
                   <h6 class="mb-0">(Default) </h6>
                 </div>
                 <div class="col-6 col-md-4 col-xl mb-4 mb-xl-0 text-center">
-                  <span class="h4 font-weight-bold" data-countup='{"count":23542,"duration":10000}'>0</span>
+                  <span class="h4 font-weight-bold" data-countup='{"count":89,"duration":10000,"suffix":"%"}'>0%</span>
                   <h6 class="mb-0">(Duration 10s) </h6>
                 </div>
                 <div class="col-6 col-md-4 col-xl mb-4 mb-xl-0 text-center">
-                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"comma"}'>0</span>
-                  <h6 class="mb-0">(Comma) </h6>
+                  <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"comma","delay":2}'>0</span>
+                  <h6 class="mb-0">(Comma &amp; delay) </h6>
                 </div>
                 <div class="col-6 col-md-4 col-xl mb-4 mb-md-0 text-center">
                   <span class="h4 font-weight-bold" data-countup='{"count":36487,"format":"space"}'>0</span>
@@ -62,8 +77,8 @@
                   <h6 class="mb-0">(Prefix)</h6>
                 </div>
               </div><pre class="mt-2"><code class="language-html">&lt;span data-countup='{&quot;count&quot;:36487}'&gt;0&lt;/span&gt;
-&lt;span data-countup='{&quot;count&quot;:23542,&quot;duration&quot;:10000}'&gt;0&lt;/span&gt;
-&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;comma&quot;}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:89,&quot;duration&quot;:10000,&quot;suffix&quot;:&quot;%&quot;}'&gt;0&lt;/span&gt;
+&lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;comma&quot;,&quot;delay&quot;:2}'&gt;0&lt;/span&gt;
 &lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;space&quot;}'&gt;0&lt;/span&gt;
 &lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;alphanumeric&quot;}'&gt;0&lt;/span&gt;
 &lt;span data-countup='{&quot;count&quot;:36487,&quot;format&quot;:&quot;comma&quot;,&quot;prefix&quot;:&quot;$&quot;}'&gt;0&lt;/span&gt;</code></pre>

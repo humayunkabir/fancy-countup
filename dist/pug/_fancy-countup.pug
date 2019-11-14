@@ -7,6 +7,21 @@ block append variables
       linkText: 'See on GitHub'
     }
 
+mixin fancyCountupOptions
+  ul
+    li
+      code count
+    li
+      code format
+    li
+      code prefix
+    li
+      code suffix
+    li
+      code duration
+    li
+      code delay
+
 mixin fancyCountupDoc
   .row
     .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
@@ -15,12 +30,12 @@ mixin fancyCountupDoc
       h6.mb-0 (Default) 
     .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
       = '\n'
-      span.h4.font-weight-bold(data-countup!={"count": 23542, "duration": 10000}) 0
+      span.h4.font-weight-bold(data-countup!={"count": 89, "duration": 10000, suffix: '%'}) 0%
       h6.mb-0 (Duration 10s) 
     .col-6.col-md-4.col-xl.mb-4.mb-xl-0.text-center
       = '\n'
-      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "comma"}) 0
-      h6.mb-0 (Comma) 
+      span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "comma", delay: 2}) 0
+      h6.mb-0 (Comma &amp; delay) 
     .col-6.col-md-4.col-xl.mb-4.mb-md-0.text-center
       = '\n'
       span.h4.font-weight-bold(data-countup!={"count": 36487, "format": "space"}) 0
@@ -37,9 +52,9 @@ mixin fancyCountupDoc
 mixin fancyCountupCode
   span(data-countup!={"count": 36487}) 0
   = '\n'
-  span(data-countup!={"count": 23542, "duration": 10000}) 0
+  span(data-countup!={"count": 89, "duration": 10000, suffix: '%'}) 0
   = '\n'
-  span(data-countup!={"count": 36487, "format": "comma"}) 0
+  span(data-countup!={"count": 36487, "format": "comma", delay: 2}) 0
   = '\n'
   span(data-countup!={"count": 36487, "format": "space"}) 0
   = '\n'

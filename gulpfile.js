@@ -106,6 +106,7 @@ gulp.task('js', () => gulp.src(PATHS.JS.SRC)
     ],
     plugins: [
       process.env.PLUGINS && 'transform-es2015-modules-strip',
+      '@babel/plugin-transform-destructuring',
       '@babel/plugin-proposal-object-rest-spread',
       'transform-strict-mode',
     ].filter(Boolean),
